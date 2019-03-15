@@ -9,7 +9,7 @@
     "build": "webpack -p",
     "start": "node index"
   },
-  "author": "",
+  "author": "byemane <beteyemane@hotmail.co.uk>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -36,5 +36,6 @@
   },
   "resolutions": {
     "terser": "3.14.1"
-  }
+  },
+  "repository": "git@github.com:beteyemane/project-02.git"
 }

@@ -16,11 +16,18 @@ class EventsIndex extends React.Component {
 
 
   componentDidMount() {
-    axios.get('https://cors-anywhere.herokuapp.com/https://www.skiddle.com/api/v1/events/?api_key=f349a5651e958a0953951d2835d33758')
-      .then(response => this.setState({events: response.data.results}))
 
-    // axios.get('http://api.weatherunlocked.com/api/current/uk.nw103dl?app_id=e1d52047&app_key=f661656492325936d90c42a2a8485541')
-    //   .then(response => this.setState({weather: response}))
+    const { lat, lng } = this.props.location.state.latLng
+
+    axios.get('https://cors-anywhere.herokuapp.com/https://www.skiddle.com/api/v1/events/', {
+      params: {
+        api_key: '0c64ae5cca7903c86353520198c58021',
+        latitude: lat,
+        longitude: lng,
+        radius: 5
+      }
+    })
+      .then(response => this.setState({events: response.data.results}))
   }
 
 

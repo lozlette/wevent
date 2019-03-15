@@ -14,18 +14,16 @@ class App extends React.Component {
     super()
   }
 
-
   render() {
-
 
     return (
       <BrowserRouter>
         <main>
           <NavBar />
           <Switch>
-            <Route path="/events/search/:eventstown" component={EventsTown}/>
+            <Route path="/events/search/:town" component={EventsTown}/>
             <Route path="/events/:id" component={EventsShow}/>
-            <Route path="/events/" component={EventsIndex}/>
+            <Route path="/events" component={EventsIndex}/>
             <Route path="/" component={Home}/>
           </Switch>
         </main>
