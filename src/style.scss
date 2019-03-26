@@ -195,6 +195,16 @@ div.columns.row {
   }
 }
 
+#seeMore {
+  background-color: #5b4045;
+  width: 100px;
+  font-size: 16px;
+}
+
+#seeMore:hover {
+  background-color: black;
+}
+
 select {
   height: 50px;
   font-size: 20px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class EventsShow extends React.Component {
 
@@ -24,7 +25,8 @@ class EventsShow extends React.Component {
 
   render(){
     console.log(this.state.event)
-    const { eventname, date, description, largeimageurl, entryprice, openingtimes } = this.state.event
+    const { eventname, date, description, largeimageurl, entryprice, openingtimes, link} = this.state.event
+    console.log(link)
     return(
       <section className="section">
         <div className="container event-show">
@@ -39,12 +41,16 @@ class EventsShow extends React.Component {
             </div>
             <h4 className="title is-4">{}</h4>
             <p>{description}</p>
-            <hr />
+            <br/>
             <div className="details">
-            <h3><span>Date:</span> {date}</h3>
-            <h3><span>Price:</span> {entryprice}</h3>
+              <div>
+                <h3><span>Date:</span> {date}</h3>
+                <h3><span>Price:</span> {entryprice}</h3>
+              </div>
+              <a href={link} target='_blank' rel='noopener noreferrer' className="button" id="seeMore">
+              See More
+              </a>
             </div>
-            <hr />
           </div>
         </div>
       </section>
