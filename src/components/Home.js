@@ -11,7 +11,7 @@ class Home extends React.Component {
     super()
     this.state = {
       town: '',
-      latLng: {}
+      weather: []
     }
 
     this.towns = {
@@ -24,24 +24,35 @@ class Home extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.getWeather = this.getWeather.bind(this)
   }
 
   handleChange(e) {
-    console.log(typeof e.target.value)
-
-    this.setState({ latLng: this.towns[e.target.value], town: e.target.value })
+    this.setState({ latLng: this.towns[e.target.value], town: e.target.value }, () => this.getWeather())
   }
 
   handleSubmit(e) {
+    e.preventDefault()
+
     axios.get(`https://www.skiddle.com/api/v1/events/search/?api_key=0c64ae5cca7903c86353520198c58021&${this.state.latLng}&radius=5`)
       .then(response => this.setState({eventsLocation: response.data.results}))
       .then(() => this.props.history.push(`/events/search/${this.state.town}`))
-    e.preventDefault()
-    console.log('SUBMITTED!!!!!!!', this.state.eventsLocation)
   }
 
+  getWeather(){
+    const {lat, lng} = this.state.latLng
+    axios.get(`http://api.weatherunlocked.com/api/current/${lat},${lng}`, {
+      params: {
+        app_id: 'e1d52047',
+        app_key: 'f661656492325936d90c42a2a8485541'
+      }
+    })
+      .then(response => this.setState({weather: response.data}))
+  }
 
   render() {
+    console.log('weather', this.state.weather)
+    console.log('latlng', this.state.latLng)
     return (
 
       <section className="hero is-primary is-fullheight">

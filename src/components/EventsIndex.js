@@ -25,6 +25,7 @@ class EventsIndex extends React.Component {
   }
 
   render() {
+    console.log(this.state.weather)
     if(!this.state.events[0]) return null
     return (
       <main className="section">
