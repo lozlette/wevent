@@ -14,13 +14,16 @@ class EventsShow extends React.Component {
 
   componentDidMount() {
     //this will be this.props.match.params.town.id
-    axios.get(`https://www.skiddle.com/api/v1/events/${this.props.match.params.id}/?api_key=0c64ae5cca7903c86353520198c58021&limit=100/`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://www.skiddle.com/api/v1/events/${this.props.match.params.id}`, {
+      params: {
+        api_key: '0c64ae5cca7903c86353520198c58021'
+      }
+    })
       .then(response => this.setState({events: response.data.results}))
   }
 
-
   render(){
-
+    console.log(this.state.events)
     const { eventname, date, description, largeimageurl, entryprice } = this.state.events
     return(
       <section className="section">
