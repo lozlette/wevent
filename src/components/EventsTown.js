@@ -13,17 +13,15 @@ class EventsTown extends React.Component {
       weather: [],
       eventWeather: []
     }
-    // this.weatherEvents.bind = this.weatherEvents.bind(this)
   }
-
 
   componentDidMount() {
 
     const { temp_c } = this.props.location.state.weather
-    if(temp_c >= '20') {
-      eventType = 'FEST'
+    if(temp_c >= '18') {
+      eventType = 'FEST,SPORT,KIDS'
     } else {
-      eventType = 'LIVE'
+      eventType = 'LIVE,CLUB'
     }
 
     const { lat, lng } = this.props.location.state.latLng
@@ -33,19 +31,12 @@ class EventsTown extends React.Component {
         latitude: lat,
         longitude: lng,
         radius: 5,
-        eventcode: eventType
+        eventcode: eventType,
+        limit: 50
       }
     })
       .then(response => this.setState({events: response.data.results}))
   }
-
-
-  // weatherEvents() {
-  //   const { temp_c } = this.props.location.state.weather
-  //   if(temp_c >= '20') {
-  //     eventType = 'FEST'
-  //   }
-  // }
 
   render() {
     console.log(this.state.events)
