@@ -7,7 +7,7 @@ class EventsShow extends React.Component {
     super()
 
     this.state = {
-      events: []
+      event: []
 
     }
   }
@@ -19,12 +19,12 @@ class EventsShow extends React.Component {
         api_key: '0c64ae5cca7903c86353520198c58021'
       }
     })
-      .then(response => this.setState({events: response.data.results}))
+      .then(response => this.setState({event: response.data.results}))
   }
 
   render(){
-    console.log(this.state.events)
-    const { eventname, date, description, largeimageurl, entryprice } = this.state.events
+    console.log(this.state.event)
+    const { eventname, date, description, largeimageurl, entryprice } = this.state.event
     return(
       <section className="section">
         <div className="container">

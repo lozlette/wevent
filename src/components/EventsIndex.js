@@ -24,7 +24,6 @@ class EventsIndex extends React.Component {
       .then(response => this.setState({events: response.data.results}))
   }
 
-
   render() {
     if(!this.state.events[0]) return null
     return (

@@ -21,9 +21,9 @@ class App extends React.Component {
         <main>
           <NavBar />
           <Switch>
-            <Route path="/events/search/:town" component={EventsTown}/>
+            <Route path="/events/" component={EventsTown}/>
+            <Route path="/allevents/" component={EventsIndex}/>
             <Route path="/events/:id" component={EventsShow}/>
-            <Route path="/events" component={EventsIndex}/>
             <Route path="/" component={Home}/>
           </Switch>
         </main>

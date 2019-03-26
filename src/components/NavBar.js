@@ -11,7 +11,7 @@ const NavBar = () => {
             <Link to="/" className="button is-black">
           Home
             </Link>
-            <Link to="/events" className="button is-black">
+            <Link to="/allevents" className="button is-black">
         Events
             </Link>
           </div>
