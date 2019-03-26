@@ -4,25 +4,24 @@ const EventCard = ({ id, eventname, description, venue, largeimageurl, date, ope
 
   return (
     <div className="card">
+      <div className="card-header">
+        <h1 className="card-header-title title is-6"> {eventname} </h1>
+      </div>
       <Link to={`/events/${id}`}>
-        <div className="card-header">
-          <h1 className="card-header-title title is-4"> {eventname} </h1>
-        </div>
-        <h2 className="card-header-title venue-title">{venue.name}</h2>
         <div className="card-image">
           <figure className="image">
             <img src={largeimageurl} alt={eventname} width="300px"/>
           </figure>
         </div>
-        <div className="card-content">
-          <div className="content">
-            <h3>{description}</h3>
-            <h3>{date}</h3>
-            <h4> Time: {openingtimes.doorsopen} - {openingtimes.doorsclose}</h4>
-            <h4> Location: {venue.town} </h4>
-          </div>
-        </div>
       </Link>
+      <div className="card-content">
+        <div className="content">
+          <p>{date}</p>
+          <br/>
+          <p>{venue.address}</p>
+          <p>{venue.postcode}</p>
+        </div>
+      </div>
     </div>
 
   )

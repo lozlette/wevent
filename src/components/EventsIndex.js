@@ -30,7 +30,7 @@ class EventsIndex extends React.Component {
         <div className="container">
           <div className="columns is-multiline">
             {this.state.events.map((event, index) =>
-              <div className="column is-one-half" key={index}>
+              <div className="column is-one-quarter" key={index}>
                 <EventCard {...event}/>
               </div>)}
           </div>

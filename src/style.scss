@@ -34,7 +34,8 @@ html {
 }
 
 .background {
-  background: radial-gradient(1000px at 75% -75%, rgba(238, 37, 9, 0.9), rgba(250, 125, 69, 0.5));
+  // background: radial-gradient(1000px at 75% -75%, rgba(238, 37, 9, 0.9), rgba(250, 125, 69, 0.5));
+  background-color: #5b4045;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -106,14 +107,19 @@ html {
   color: black;
 }
 
-#subtitle {
-  text-align: center;
+.card {
+  min-height: 550px;
+  width: 400px;
 }
 
-.card {
-  height: 700px;
-  width: 400px;
-  text-align: center;
+.card-header-title {
+  min-height: 75px;
+}
+
+div.content {
+  p:nth-child(1) {
+    font-weight: bold;
+  }
 }
 
 .title-container {
@@ -129,6 +135,19 @@ html {
   align-content: center;
   flex-direction: column;
   width: 800px;
+  height: 90vh;
+  #subtitle {
+    color: white;
+    text-align: center;
+  }
+}
+
+.temp-div {
+  background-color: #5b4045;
+  margin-bottom: 40px;
+  h1 {
+    color: white;
+  }
 }
 
 select {
@@ -141,7 +160,8 @@ select {
 }
 
 select:hover, .button:hover {
-  background-color: red;
+  color: #5b4045;
+  background-color: black;
 }
 
 option {
@@ -175,15 +195,6 @@ option {
 
 .buttons:not(:last-child) {
   margin-bottom: 0;
-}
-
-#weather {
-  height: 125px;
-  background-color: rgb(238, 37, 9);
-  font-size: 90px;
-  color: black;
-  font-weight: bold;
-  text-align: right;
 }
 
 .form-center {

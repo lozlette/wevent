@@ -40,14 +40,12 @@ class EventsTown extends React.Component {
 
   render() {
     console.log(this.state.events)
-    const {date} = this.state.events
     const { temp_c } = this.props.location.state.weather
     if(!this.state.events[0]) return null
     return (
       <main className="section">
         <div className="container">
-          <h1>{temp_c}</h1>
-          <h1>{date}</h1>
+          <div className="temp-div"><h1 className="title is-2">{temp_c}º</h1></div>
           <div className="columns is-multiline">
             {this.state.events.map((event, index) =>
               <div className="column is-one-quarter" key={index}>
