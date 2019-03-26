@@ -177,6 +177,24 @@ div.columns.row {
   }
 }
 
+.event-show {
+  .title.is-1 {
+    padding: 10px;
+  }
+  p {
+    text-align: center;
+  }
+  h3 {
+    span {
+      font-weight: bold;
+    }
+  }
+  .details {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 select {
   height: 50px;
   font-size: 20px;

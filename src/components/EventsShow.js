@@ -27,7 +27,7 @@ class EventsShow extends React.Component {
     const { eventname, date, description, largeimageurl, entryprice, openingtimes } = this.state.event
     return(
       <section className="section">
-        <div className="container">
+        <div className="container event-show">
           <h1 className="title is-1">{eventname}</h1>
           <hr />
 
@@ -37,14 +37,14 @@ class EventsShow extends React.Component {
                 <img src={largeimageurl} alt={eventname} />
               </figure>
             </div>
-
-              <h4 className="title is-4">{}</h4>
-              <p>{description}</p>
-              <hr />
-              <h3>{date}</h3>
-
-              <h3>{entryprice}</h3>
-              <hr />
+            <h4 className="title is-4">{}</h4>
+            <p>{description}</p>
+            <hr />
+            <div className="details">
+            <h3><span>Date:</span> {date}</h3>
+            <h3><span>Price:</span> {entryprice}</h3>
+            </div>
+            <hr />
           </div>
         </div>
       </section>
