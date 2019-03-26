@@ -122,11 +122,25 @@ div.content {
   }
 }
 
+h1.title {
+  background-color: #5b4045;
+  color: white;
+}
+
 .title-container {
   display: flex;
   justify-content: center;
   align-content: center;
   height: 700px;
+}
+
+div.columns.row {
+  flex-direction: column;
+  justify-content: center;
+  .image {
+    justify-content: center;
+    display: flex;
+  }
 }
 
 .home-container {
@@ -144,9 +158,22 @@ div.content {
 
 .temp-div {
   background-color: #5b4045;
-  margin-bottom: 40px;
+  display: flex;
+  padding: 16px 10px;
+  justify-content: center;
+  margin-bottom: 20px;
   h1 {
     color: white;
+    align-items: center;
+    display: flex;
+  }
+  h1:nth-child(2) {
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+  }
+  h1.title.is-2 {
+    margin-bottom: 0;
   }
 }
 

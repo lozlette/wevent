@@ -2,13 +2,12 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import EventsWeather from './EventsWeather'
-import EventsIndex from './EventsIndex'
+import EventsTown from './EventsTown'
 
 class Home extends React.Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       town: '',
       weather: []
@@ -53,6 +52,7 @@ class Home extends React.Component {
   render() {
     console.log('weather', this.state.weather)
     console.log('latlng', this.state.latLng)
+    console.log('town', this.state.town)
     return (
       <section className="hero is-primary is-fullheight">
         <div className="background">

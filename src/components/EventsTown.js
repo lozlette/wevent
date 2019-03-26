@@ -13,6 +13,8 @@ class EventsTown extends React.Component {
       weather: [],
       eventWeather: []
     }
+
+    // this.filterTown.bind = this.filterTown.bind(this)
   }
 
   componentDidMount() {
@@ -38,6 +40,12 @@ class EventsTown extends React.Component {
       .then(response => this.setState({events: response.data.results}))
   }
 
+  // filterTown() {
+  //   this.state.events.filter(event => {
+  //     console.log(event.venue.town)
+  //   })
+  // }
+
   render() {
     console.log(this.state.events)
     const { temp_c } = this.props.location.state.weather
@@ -45,7 +53,10 @@ class EventsTown extends React.Component {
     return (
       <main className="section">
         <div className="container">
-          <div className="temp-div"><h1 className="title is-2">{temp_c}º</h1></div>
+          <div className="temp-div">
+            <h1 className="title is-2">{temp_c}º</h1>
+            <h1 className="title is-2">{this.props.location.state.town}</h1>
+          </div>
           <div className="columns is-multiline">
             {this.state.events.map((event, index) =>
               <div className="column is-one-quarter" key={index}>

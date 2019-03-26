@@ -24,28 +24,27 @@ class EventsShow extends React.Component {
 
   render(){
     console.log(this.state.event)
-    const { eventname, date, description, largeimageurl, entryprice } = this.state.event
+    const { eventname, date, description, largeimageurl, entryprice, openingtimes } = this.state.event
     return(
       <section className="section">
         <div className="container">
           <h1 className="title is-1">{eventname}</h1>
           <hr />
 
-          <div className="columns">
+          <div className="columns row">
             <div className="column">
               <figure className="image">
                 <img src={largeimageurl} alt={eventname} />
               </figure>
             </div>
 
-            <div className="column">
               <h4 className="title is-4">{}</h4>
               <p>{description}</p>
               <hr />
               <h3>{date}</h3>
+
               <h3>{entryprice}</h3>
               <hr />
-            </div>
           </div>
         </div>
       </section>
