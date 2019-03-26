@@ -20,6 +20,9 @@ class EventsTown extends React.Component {
   componentDidMount() {
 
     const { temp_c } = this.props.location.state.weather
+    if (temp_c === '') {
+      temp_c = '...loading'
+    }
     if(temp_c >= '18') {
       eventType = 'FEST,SPORT,KIDS'
     } else {

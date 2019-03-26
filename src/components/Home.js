@@ -40,7 +40,7 @@ class Home extends React.Component {
 
   getWeather(){
     const {lat, lng} = this.state.latLng
-    axios.get(`http://api.weatherunlocked.com/api/current/${lat},${lng}`, {
+    axios.get(`https://cors-anywhere.herokuapp.com/http://api.weatherunlocked.com/api/current/${lat},${lng}`, {
       params: {
         app_id: 'e1d52047',
         app_key: 'f661656492325936d90c42a2a8485541'
