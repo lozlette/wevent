@@ -11,7 +11,9 @@ class EventsTown extends React.Component {
       events: [],
       weather: []
     }
+    this.weatherEvents.bind = this.weatherEvents.bind(this)
   }
+
 
   componentDidMount() {
 
@@ -27,13 +29,24 @@ class EventsTown extends React.Component {
       .then(response => this.setState({events: response.data.results}))
   }
 
+  weatherEvents() {
+    this.state.events.forEach(event => {
+      if(event.EventCode === 'LIVE' )
+        console.log('LIVE')
+    })
+  }
+
   render() {
+    console.log(this.state.events)
+    const {date} = this.state.events
     const { temp_c } = this.props.location.state.weather
     if(!this.state.events[0]) return null
     return (
       <main className="section">
         <div className="container">
+          {this.weatherEvents()}
           <h1>{temp_c}</h1>
+          <h1>{date}</h1>
           <div className="columns is-multiline">
             {this.state.events.map((event, index) =>
               <div className="column is-one-quarter" key={index}>
