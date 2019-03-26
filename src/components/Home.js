@@ -57,7 +57,6 @@ class Home extends React.Component {
       <section className="hero is-primary is-fullheight">
         <div className="background">
           <div className="container">
-            <EventsWeather />
             <div className="circle"></div>
             <div className="circle"></div>
             <div className="circle"></div>
@@ -65,10 +64,8 @@ class Home extends React.Component {
 
               <div className="container home-container">
                 <h1 className="title is-1" id="logo">Wevent</h1>
-                <h1 className="title is-3" id="subtitle">Hot/cold and don&apos;t know where to go? We&apos;ll sort you out!</h1>
-                <h1 className="title is-5" id="subtitle">Find the best event near you based on the weather</h1>
-
-                <form>
+                <h1 className="title is-5" id="subtitle">Find the best events near you based on the weather</h1>
+                <form className="home-form">
                   <select defaultValue="Please select a town" onChange={this.handleChange}>
                     <option disabled>Please select a town</option>
                     {Object.keys(this.towns).map(town =>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
 
-    <nav className="navbar is-white" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-black" role="navigation" aria-label="main navigation">
       <div className="navbar-start">
         <div className="navbar-item">
           <div className="buttons">

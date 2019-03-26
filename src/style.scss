@@ -30,7 +30,7 @@
 $time: 15s;
 
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 .background {
@@ -59,24 +59,24 @@ html {
 }
 
 .circle {
-  height: 800px;
-  width: 800px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
   position: absolute;
-  top: -500px;
+  top: -200px;
   transform-origin: 75% 50%;
   animation: blink $time infinite ease-in-out;
 }
 
 .circle:nth-child(2) {
-  height: 790px;
-  width: 790px;
+  height: 290px;
+  width: 90px;
   animation: blink $time infinite 1s ease-in-out reverse;
 }
 
 .circle:nth-child(3) {
-  height: 795px;
-  width: 795px;
+  height: 195px;
+  width: 195px;
   animation: blink $time infinite 1.5s ease-in-out;
 }
 
@@ -101,7 +101,7 @@ html {
 
 #logo {
   text-align: center;
-  font-size: 9rem;
+  font-size: 4rem;
   font-family: 'Baloo Thambi', cursive;
   color: black;
 }
@@ -149,11 +149,28 @@ option {
 }
 
 .button {
-  margin-top: 10px;
   border: none;
-  height: 50px;
+  height: 35px;
   font-size: 20px;
   color: black;
+}
+
+.home-form {
+  justify-content: center;
+  display: flex;
+  select {
+    height: 35px;
+  }
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  .navbar-item {
+    .button {
+      margin: 0;
+    }
+  }
 }
 
 .buttons:not(:last-child) {
