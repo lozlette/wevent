@@ -30,10 +30,13 @@ class EventsIndex extends React.Component {
   }
 
   render() {
+    const { temp_c } = this.props.location.state.weather
+    console.log(this.props.location.state.weather)
     if(!this.state.events[0]) return null
     return (
       <main className="section">
         <div className="container">
+          <h1>{temp_c}</h1>
           <div className="columns is-multiline">
             {this.state.events.map((event, index) =>
               <div className="column is-one-half" key={index}>

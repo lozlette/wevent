@@ -3,7 +3,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import EventsWeather from './EventsWeather'
-// import EventsTown from './EventsTown'
+import EventsIndex from './EventsIndex'
 
 class Home extends React.Component {
 
@@ -54,7 +54,6 @@ class Home extends React.Component {
     console.log('weather', this.state.weather)
     console.log('latlng', this.state.latLng)
     return (
-
       <section className="hero is-primary is-fullheight">
         <div className="background">
           <div className="container">
@@ -81,7 +80,6 @@ class Home extends React.Component {
                     state: this.state
                   }}>Search</Link>
                 </form>
-
               </div>
             </div>
           </div>

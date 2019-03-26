@@ -1,12 +1,11 @@
 import React from 'react'
 import axios from 'axios'
 import EventCard from './EventCard'
-import EventsWeather from './EventsWeather'
 
 
 class EventsIndex extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       events: [],
@@ -25,7 +24,6 @@ class EventsIndex extends React.Component {
   }
 
   render() {
-    console.log(this.state.weather)
     if(!this.state.events[0]) return null
     return (
       <main className="section">
@@ -35,7 +33,6 @@ class EventsIndex extends React.Component {
               <div className="column is-one-half" key={index}>
                 <EventCard {...event}/>
               </div>)}
-            <EventsWeather {...event}/>
           </div>
         </div>
       </main>
