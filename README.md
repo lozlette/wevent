@@ -33,9 +33,9 @@ Wevent is a web application that allows users to select a city and view events t
 Homepage
 ![Screenshot 2019-03-27 at 19 12 55](https://user-images.githubusercontent.com/44004811/55105420-616f3180-50c4-11e9-860b-9fd570a8f842.png)
 
-![Screenshot 2019-03-26 at 22 53 58](https://user-images.githubusercontent.com/44004811/55105499-97141a80-50c4-11e9-95cd-dfb122ceaf9d.png)
+![Screenshot 2019-03-27 at 19 16 56](https://user-images.githubusercontent.com/44004811/55122706-c09a6980-50f7-11e9-8931-0af36ae1b370.png)
 
-![Screenshot 2019-03-27 at 19 15 25](https://user-images.githubusercontent.com/44004811/55105554-b448e900-50c4-11e9-849d-fac4afe0f7e9.png)
+![Screenshot 2019-03-27 at 19 17 16](https://user-images.githubusercontent.com/44004811/55122719-c7c17780-50f7-11e9-9dc9-bcde390fb7a0.png)
 
 ## Process
 
