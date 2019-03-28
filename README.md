@@ -53,7 +53,8 @@ The next step was to implement the weather feature. We had to think of a clever 
 
 Having to combine the two API's was tricky as the Weather API was dependant on the Skiddle API. Fetching the data from Weather Unlocked required the latitude and longitude information that is obtained when an Axios GET request for Skiddle occurs. After some research this meant that because to perform an action immediately after setting state on a state variable I had to create a callback on the handleChange function.
 
-```handleChange(e) {
+```
+handleChange(e) {
     this.setState({ latLng: this.towns[e.target.value], town: e.target.value }, () => this.getWeather())
   }
  ```
