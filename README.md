@@ -60,8 +60,10 @@ Having to combine the two API's was tricky as the Weather API was dependant on t
 
 ## Wins
 
+Being able to achieve an application that retrieves data from 2 API's.
+
 ## Future Features
 
-*  another api for lat and long info
-- a map
+* To integrate another API to provide with longatude and latitude information instead of hard-coding.
+* A map of the events location.
 
