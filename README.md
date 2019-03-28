@@ -47,14 +47,21 @@ We used two API's:
 We tested the endpoints of our API using Insomnia and started to build the front-end once we felt satisfied with the data being retrieved.
 Displaying event information was our first priority where initially used the general multiple event endpoint. To then enhance user experience, we began to build a search bar that gives you the option of selecting a city in the UK. As Skiddle does not provide an endpoint that refines data by city, but by latitude and longitude, we hard-coded each cities lat and long and stored them in a variable with the name of town being the key.
 
-The next step was to implement the weather feature. We had to think of a clever system that displayes events that are deemed appropriate for the weather. We acheived this by using Skiddle's endpoints that filter the different event types, such as festivals, live music, exhibitions and attractions, and sporting events. By separating the events that occur outdoors from those that are indoors, we were able to combine this data with the weather API and display the events depending on the current temprerature.
+The next step was to implement the weather feature. We had to think of a clever system that displayes events that are deemed appropriate for the weather. We acheived this by using Skiddle's endpoints that filter the different event types, such as festivals, live music, exhibitions and attractions, and sporting events. By separating the events that occur outdoors from those that are indoors, we were able to combine this data with the weather API and display the events depending on the current temprerature. 
 
 ## Challenges
+
+Having to combine the two API's was tricky as the Weather API was dependant on the Skiddle API. Fetching the data from Weather Unlocked required the latitude and longitude information that is obtained when an Axios GET request for Skiddle occurs. After some research this meant that because to perform an action immediately after setting state on a state variable I had to create a callback on the handleChange function.
+
+```handleChange(e) {
+    this.setState({ latLng: this.towns[e.target.value], town: e.target.value }, () => this.getWeather())
+  }
+ ```
 
 ## Wins
 
 ## Future Features
 
-- another api for lat and long info
+*  another api for lat and long info
 - a map
 
