@@ -46,18 +46,15 @@ We used two API's:
 
 We tested the endpoints of our API using Insomnia and started to build the front-end once we felt satisfied with the data being retrieved.
 Displaying event information was our first priority where initially used the general multiple event endpoint. To then enhance user experience, we began to build a search bar that gives you the option of selecting a city in the UK. As Skiddle does not provide an endpoint that refines data by city, but by latitude and longitude, we hard-coded each cities lat and long and stored them in a variable with the name of town being the key.
+![towns](https://user-images.githubusercontent.com/7090684/55726962-e0d7fb80-5a08-11e9-8c18-79306460f739.png)
 
 The next step was to implement the weather feature. We had to think of a clever system that displays events that are deemed appropriate for the weather. We achieved this by using Skiddle's endpoints that filter the different event types, such as festivals, live music, exhibitions and attractions, and sporting events. By separating the events that occur outdoors from those that are indoors, we were able to combine this data with the weather API and display the events depending on the current temperature. 
 
+
 ## Challenges
 
-Having to combine the two API's was tricky as the Weather API was dependant on the Skiddle API. Fetching the data from Weather Unlocked required the latitude and longitude information that is obtained when an Axios GET request for Skiddle occurs. Because I wanted to perform this action immediately after setting state on a state variable, after some research I found that I had to create a callback on the handleChange function.
-
-```
-handleChange(e) {
-    this.setState({ latLng: this.towns[e.target.value], town: e.target.value }, () => this.getWeather())
-  }
- ```
+Searching for events using a choice of town was a challenge, as I had to first hard code in the latitude and longtitude of each town, as these were the required details needed for the API endpoint. 
+![townslatlng](https://user-images.githubusercontent.com/7090684/55727453-ef72e280-5a09-11e9-9d39-c03e3d2a6adf.png)
 
 ## Wins
 
@@ -67,4 +64,5 @@ Being able to achieve an application that retrieves data from 2 API's.
 
 * To integrate another API to provide with longitude and latitude information instead of hard-coding.
 * A map of the events location.
+* I would like to include more weather details for each town and event.
 
